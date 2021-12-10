@@ -15,7 +15,7 @@ int get_PID(Processos *Proceso){
     return Proceso->PID;
 }
 
-
+// Funcao abaixo limita o cunjuto entre [1,5];
 void set_Prioridade(Processos *Processo){
     Processo->Prioridade= 1 + rand() % 5;
 }
