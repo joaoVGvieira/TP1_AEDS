@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "tempo.h"
 typedef struct
 {
     int PID;
-    //depois olha tempo
+    tempo time;
     int Prioridade;
 } Processos; 
-
 
 
 void implementar(Processos *Processo, int PID, int Prioridade);
@@ -29,6 +29,11 @@ int get_PID(Processos *Processo);
 void set_Prioridade(Processos *Processo);
 int get_Prioridade(Processos *Processo);
 
+//Tempo:
+
+/*void set_tempo(Processos *Processo);
+char* get_tempo(Processos *processo);
+*/
 
 //set(definir valor na variável) PID
 //set(definir valor na variável) tempo
