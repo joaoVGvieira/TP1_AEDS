@@ -8,6 +8,13 @@ typedef struct
     int Prioridade;
 } Processo; 
 
+/*
+---------Alocar o processor-----------------
+PID: Aleatorio
+Prioridae: Aleatorio(1 a 5);
+hora: Não tenho ideia de como fazer ainda
+*/
+
 //set(definir valor na variável) PID
 //set(definir valor na variável) tempo
 //set(definir valor na variável) prioridade
