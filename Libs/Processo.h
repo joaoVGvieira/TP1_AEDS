@@ -8,6 +8,8 @@ typedef struct
     int Prioridade;
 } Processo; 
 
+
+
 /*
 ---------Alocar o processor-----------------
 PID: Aleatorio
