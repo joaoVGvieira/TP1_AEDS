@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+// Manipulação de apontamento de ponteiros.
 int main(){
     double a;
     double *p;
