@@ -4,7 +4,7 @@
 #include "Libs/lista_Processos.h"
 // #include "../Sources/lista_Processos.c" Precisso incluir isso, não isso #include "Libs/lista_Processos.h"
 
-int main(){
+int main(void){
 
     //Primeira funçao vai ser ler um arquivo;
     
