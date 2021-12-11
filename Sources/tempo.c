@@ -53,7 +53,7 @@ int* get_seg(tempo *temp){
 
 // imprimir o tempo
 void imprimir_tempo(tempo* temp){
-   printf("%d:%d:%d\n\n",get_hora(temp),get_min(temp),get_seg(temp));
+   printf("%.2d:%.2d:%.2d\n\n",get_hora(temp),get_min(temp),get_seg(temp));
 }
 
 //executem para ver funcionar

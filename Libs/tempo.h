@@ -1,4 +1,5 @@
-///Sem uso ainda
+#include <stdio.h>
+#include <stdlib.h>
 
 typedef struct 
 {
