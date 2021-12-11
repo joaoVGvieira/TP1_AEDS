@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 // Criação/manipulação de um vetor dinamicamente alocado.
+// Funciona
 typedef struct{
   int idade;
   double salario;
