@@ -9,9 +9,8 @@ typedef struct
 } Processos; 
 
 
-void implementar(Processos *Processo, int PID, int Prioridade);
+void implementar(Processos *Processo, int PID, int hora,int min, int seg, int Prioridade);
 
-//void cadastro(ContaBancaria *Conta, int numero, float saldo, char *nome, char *cpf, char *tipoconta, int ano);
 
 /*
 ---------Alocar o processor-----------------
@@ -29,15 +28,3 @@ int get_PID(Processos *Processo);
 void set_Prioridade(Processos *Processo);
 int get_Prioridade(Processos *Processo);
 
-//Tempo:
-
-/*void set_tempo(Processos *Processo);
-char* get_tempo(Processos *processo);
-*/
-
-//set(definir valor na variável) PID
-//set(definir valor na variável) tempo
-//set(definir valor na variável) prioridade
-
-//get(pegar valor da variável) PID
-//get(pegar valor da variável) tempo

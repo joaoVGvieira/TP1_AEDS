@@ -1,21 +1,22 @@
 //sem uso ainda
 #include "../Libs/tempo.h"
 #include <stdio.h>
-#include <tempo.h>
-inserir_tempo(tempo *time, int hora, int min, int seg){
+#include <time.h>
 
+tempo inserir_tempo(){
+   tempo temp; 
+   nao_o_nome(&temp);
+   printf("\n\nhora:%d\n\n",temp.hora);
 }
 
-#include <time.h>
-#include <stdio.h>
 
-int main(){
+int nao_o_nome(tempo *temp){
     time_t currentTime;
     struct tm *timeinfo;
-
     currentTime= time(NULL);
-
     timeinfo = localtime(&currentTime);
-
-    printf("%02d:%02d:%02d\n\n",timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec);
+    temp->hora = timeinfo->tm_hour;
+    temp->min = timeinfo->tm_min;
+    temp->seg = timeinfo->tm_sec;
 }
+//achei do jeito que fiz a funçao acima meio feio, entao se acharem um jeito melhor podem mudar.*/

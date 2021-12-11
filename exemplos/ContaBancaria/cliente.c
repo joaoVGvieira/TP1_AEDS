@@ -14,6 +14,8 @@ void imprimir_clientes(Clientes* cliente){
     printf("\n---CPF:%s---\n\n",get_cpf(cliente));
 }
 
+
+
 void set_nome(Clientes *cliente, char *nome_novo){
     strcpy(cliente->nome, nome_novo);
 }
@@ -21,6 +23,8 @@ void set_nome(Clientes *cliente, char *nome_novo){
 char* get_nome(Clientes *cliente){
     return cliente->nome;
 }
+
+
 
 void set_cpf(Clientes *cliente, char *cpf_novo){
      strcpy(cliente->cpf, cpf_novo);
