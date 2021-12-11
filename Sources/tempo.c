@@ -28,8 +28,7 @@ void set_hora(tempo *temp, int hour){
         temp->hora = hour;
 }
 
-int* get_hora(tempo *temp){
-  
+int get_hora(tempo *temp){ 
   return temp->hora;
 }
 
@@ -38,7 +37,7 @@ void set_min(tempo *temp, int min){
     temp->min = min;
 }
 
-int* get_min(tempo *temp){
+int get_min(tempo *temp){
   return temp->min;
 }
 
@@ -47,16 +46,15 @@ void set_seg(tempo *temp, int sec){
     temp->seg = sec;
 }
 
-int* get_seg(tempo *temp){
+int get_seg(tempo *temp){
   return temp->seg;
 }
 
 // imprimir o tempo
-void imprimir_tempo(tempo* temp){
+void imprimir_tempo(tempo *temp){
    printf("%.2d:%.2d:%.2d\n\n",get_hora(temp),get_min(temp),get_seg(temp));
 }
 
-//executem para ver funcionar
 int main(){
-    inserir_tempo();
+  inserir_tempo();
 }

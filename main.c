@@ -6,7 +6,7 @@ int main(){
 
     //Primeira funçao vai ser ler um arquivo;
     
-
+    inserir_tempo();
     system("pause");
     return 0;
 }
