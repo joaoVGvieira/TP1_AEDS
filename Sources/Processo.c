@@ -3,9 +3,10 @@
 #include <stdlib.h>
 #include "../Libs/tempo.h"
 
-void implementar(Processos *Processo, int PID,int hora, int min, int seg, int Prioridade){
+void implementar(Processos *Processo, int PID,int Prioridade){
     set_PID(Processo);
-    
+
+
     set_Prioridade(Processo);
 }
 // Abaixo estou usando rand() % 9999 para gerar um PID aleatorio de 0 ate 9999.

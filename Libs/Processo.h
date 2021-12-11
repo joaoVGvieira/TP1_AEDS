@@ -9,14 +9,13 @@ typedef struct
 } Processos; 
 
 
-void implementar(Processos *Processo, int PID, int hora,int min, int seg, int Prioridade);
+void implementar(Processos *Processo, int PID, int Prioridade);
 
 
 /*
 ---------Alocar o processor-----------------
 PID: Aleatorio
 Prioridade: Aleatorio(1 a 5);
-hora: Não tenho ideia de como fazer ainda
 */
 
 //PID:

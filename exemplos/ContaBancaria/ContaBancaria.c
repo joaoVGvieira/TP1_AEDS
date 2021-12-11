@@ -67,6 +67,9 @@ char* get_tipoconta(ContaBancaria *Conta){
     return Conta->tipoconta;
 }
 
+
+
+
 void set_ano(ContaBancaria *Conta, int ano_novo){
     Conta->ano= ano_novo;
 }
