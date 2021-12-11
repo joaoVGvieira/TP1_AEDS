@@ -4,10 +4,12 @@
 
 typedef struct{
     Processos pid;
-}Celulas;
+    int celula_anterior;
+    int celula_proxima;
+}Celula;
 
 typedef struct{
-    Celulas *celulas;
+    Celula *vetor_celulas;
 }lista_Processos;
 
-void cria_alocacao(Celulas **celulas, int numero_celula);
+Celula* criar_vetor_celula(int numero_celula);

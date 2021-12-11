@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void cria_alocacao(Celulas **celulas, int numero_celula){
-    *celulas = (Celulas*) malloc(numero_celula * sizeof(Celulas));
+Celula* criar_vetor_celula(int numero_celula){
+    Celula *lista_celula;
+    lista_celula = (Celula*) malloc(numero_celula * sizeof(Celula));
+    return lista_celula;
 }

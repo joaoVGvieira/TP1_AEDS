@@ -10,5 +10,6 @@ int main(){
   int *a;
   aloca(&a, 5);
   a[1] = 40;
+  printf("%d %d\n", a[1], a[0]);
   return 0;
 }
