@@ -10,7 +10,7 @@ void inprime(int num){
     TRegistro *p;
     int i;
     for(i = 0; i < num; i++){
-      printf("Idade %d    salario %.2lf\n");
+      printf("Idade %d  salario %.2lf\n");
     }
 }
 void preeenche(int num){
