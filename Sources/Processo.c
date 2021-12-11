@@ -5,6 +5,8 @@
 
 void implementar(Processos *Processo, int PID,int Prioridade){
     set_PID(Processo);
+    inserir_tempo();
+    //Qualquer crar int para o tempo;
     set_Prioridade(Processo);
 }
 // Abaixo estou usando rand() % 9999 para gerar um PID aleatorio de 0 ate 9999.
