@@ -1,15 +1,16 @@
-#include "../Libs/Processo.h"
+//#include "../Libs/Processo.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 typedef struct{
-    Processos pid;
+    //Processos pid;
     int celula_anterior;
     int celula_proxima;
-}Celula;
+}Vetor_Celula;
 
-typedef struct{
-    Celula *vetor_celulas;
-}lista_Processos;
+void cria_lista_processo(int numero_celulas);
+void criar_vetor_celula(Vetor_Celula **celula, int numero_celulas);
 
-Celula* criar_vetor_celula(int numero_celula);
+void set_preenche(Vetor_Celula **celula, int numero_celulas);
+
+int get_inprime(Vetor_Celula **celula, int numero_celulas);
