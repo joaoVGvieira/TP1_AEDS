@@ -9,6 +9,7 @@ tempo inserir_tempo(){
    printf("\n\nhora:%d\n\n",temp.hora);
 }
 
+// deu certo na base da gabiarra 
 
 int nao_o_nome(tempo *temp){
     time_t currentTime;
