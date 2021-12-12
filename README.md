@@ -5,12 +5,12 @@
 
  ##Para Executar o Codigo
 
-1. No terminal Digite:
+- No terminal Digite:
 
 ```
 make
 ```
-2. Após Digite:
+- Após Digite:
 
 ```
 make a
