@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Libs/lista_Processos.h"
-// #include "../Sources/lista_Processos.c" Precisso incluir isso, não isso #include "Libs/lista_Processos.h"
+//#include "Sources/lista_Processos.c" 
 
 int main(void){
 
@@ -15,7 +15,7 @@ int main(void){
     printf("\n\n");
 
     //imprimindo o tempo
-    inserir_tempo();
+    //inserir_tempo();
     system("pause");
     return 0;
 }

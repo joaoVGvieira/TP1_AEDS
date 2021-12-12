@@ -11,6 +11,6 @@ typedef struct{
 void cria_lista_processo(int numero_celulas);
 void criar_vetor_celula(Vetor_Celula **celula, int numero_celulas);
 
-void set_preenche(Vetor_Celula **celula, int numero_celulas);
+void set_preenche(Vetor_Celula *celula, int numero_celulas);
 
-int get_inprime(Vetor_Celula **celula, int numero_celulas);
+int get_inprime(Vetor_Celula *celula, int numero_celulas);
