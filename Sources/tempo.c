@@ -52,11 +52,6 @@ int get_seg(tempo *temp){
 
 // imprimir o tempo
 void imprimir_tempo(tempo *temp){
-   printf("%.2d:%.2d:%.2d\n\n",get_hora(temp),get_min(temp),get_seg(temp));
+   printf("Tempo do sistema --> %.2d:%.2d:%.2d\n\n",get_hora(temp),get_min(temp),get_seg(temp));
 }
 
-int main()
-{
-  inserir_tempo();
-  return 0;
-}

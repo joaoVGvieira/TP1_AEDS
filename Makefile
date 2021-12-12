@@ -1,8 +1,4 @@
 all: 
-	gcc ./Sources/tempo.c ./Libs/tempo.h
-	
-run:
-
-
-tempo:
-	g++ 
+	gcc main.c  Sources/lista_Processos.c Sources/tempo.c
+a:
+	./a.out

@@ -12,6 +12,10 @@ int main(void){
 
     int num = 10;
     cria_lista_processo(num);
+    printf("\n\n");
+
+    //imprimindo o tempo
+    inserir_tempo();
     system("pause");
     return 0;
 }
