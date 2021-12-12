@@ -20,10 +20,10 @@ Prioridade: Aleatorio(1 a 5);
 
 //PID:
 void set_PID(Processos *Processo);
-int get_PID(Processos *Processo);
+int get_PID(Processos Processo);
 
 //Prioridade:
 
 void set_Prioridade(Processos *Processo);
-int get_Prioridade(Processos *Processo);
+int get_Prioridade(Processos Processo);
 

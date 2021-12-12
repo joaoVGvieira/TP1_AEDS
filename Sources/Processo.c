@@ -13,8 +13,8 @@ void implementar(Processos *Processo, int PID,int Prioridade){
 void set_PID(Processos *Processo){
      Processo->PID = rand() % 9999;
 }
-int get_PID(Processos *Proceso){
-    return Proceso->PID;
+int get_PID(Processos Proceso){
+    return Proceso.PID;
 }
 
 // Funcao abaixo limita o cunjuto entre [1,5];
@@ -22,6 +22,6 @@ void set_Prioridade(Processos *Processo){
     Processo->Prioridade= 1 + rand() % 5;
 }
 
-int get_Prioridade(Processos *Proceso){
-    return Proceso->Prioridade;
+int get_Prioridade(Processos Proceso){
+    return Proceso.Prioridade;
 }

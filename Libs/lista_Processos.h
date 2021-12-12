@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 typedef struct{
-    //Processos pid;
+    Processos pid;
     int celula_anterior;
     int celula_proxima;
 }Vetor_Celula;
