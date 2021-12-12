@@ -19,13 +19,20 @@ void set_preenche(Vetor_Celula *celula, int numero_celulas){
         celula[i].celula_anterior = i;
         celula[i].celula_proxima = 10 * i;
         set_PID(&(celula[i].pid));
+        set_Prioridade(&(celula[i].pid));
+        nao_sei_o_nome(&(celula[i].pid.time));
     }
 }
 
 int get_inprime(Vetor_Celula *celula, int numero_celulas){
     int i;
     for(i = 0; i < numero_celulas; i++){
-        printf("Anterior: %d  //  Proximo: %d\n", celula[i].celula_anterior, celula[i].celula_proxima);
-        printf("PID: %d\n", get_PID((celula[i].pid)));
+        printf("Anterior: %d // Proximo: %d //", celula[i].celula_anterior, celula[i].celula_proxima);
+        printf("PID: %d // Prioridade: %d\n", get_PID((celula[i].pid)), get_Prioridade((celula[i].pid)));
+
+        imprimir_tempo((celula[i].pid.time));
+
+        //printf("Hora: ");
+
     }
 }

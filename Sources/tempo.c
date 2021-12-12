@@ -2,13 +2,13 @@
 #include "../Libs/tempo.h"
 #include <stdio.h>
 #include <time.h>
-
+/*
 tempo inserir_tempo(){
    tempo temp; 
    nao_sei_o_nome(&temp);
-   imprimir_tempo(&temp);
+   //imprimir_tempo(&temp);
    return temp;
-}
+} */
 
 
 
@@ -28,8 +28,8 @@ void set_hora(tempo *temp, int hour){
         temp->hora = hour;
 }
 
-int get_hora(tempo *temp){ 
-  return temp->hora;
+int get_hora(tempo temp){ 
+  return temp.hora;
 }
 
 //min
@@ -37,8 +37,8 @@ void set_min(tempo *temp, int min){
     temp->min = min;
 }
 
-int get_min(tempo *temp){
-  return temp->min;
+int get_min(tempo temp){
+  return temp.min;
 }
 
 //segundos
@@ -46,12 +46,12 @@ void set_seg(tempo *temp, int sec){
     temp->seg = sec;
 }
 
-int get_seg(tempo *temp){
-  return temp->seg;
+int get_seg(tempo temp){
+  return temp.seg;
 }
 
 // imprimir o tempo
-void imprimir_tempo(tempo *temp){
+void imprimir_tempo(tempo temp){
    printf("Tempo do sistema --> %.2d:%.2d:%.2d\n\n",get_hora(temp),get_min(temp),get_seg(temp));
 }
 

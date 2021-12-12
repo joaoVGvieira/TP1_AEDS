@@ -5,7 +5,7 @@
 
 void implementar(Processos *Processo, int PID,int Prioridade){
     set_PID(Processo);
-    inserir_tempo();
+    //inserir_tempo();
     //Qualquer crar int para o tempo;
     set_Prioridade(Processo);
 }

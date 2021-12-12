@@ -15,7 +15,7 @@ int main(void){
     printf("\n\n");
 
     //imprimindo o tempo
-    inserir_tempo();
+    //inserir_tempo();
     system("pause");
     return 0;
 }
