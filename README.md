@@ -3,10 +3,9 @@
 >Trabalho Prático 1 da disciplina de Algoritmos e Estruturas de Dados 1.
 
 
- ## Para Executar o Codigo
-
+ ## Para Executar o Codigo 
+ #### Linux:
 - No terminal Digite:
-
 ```
 make
 ```
