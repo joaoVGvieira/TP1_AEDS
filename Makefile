@@ -4,3 +4,5 @@ a:
 	./a.out
 b: 
 	./a.exe
+c:
+	clear

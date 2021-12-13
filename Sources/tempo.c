@@ -3,14 +3,14 @@
 #include <stdio.h>
 #include <time.h>
 
-void inserir_tempo(tempo temp){
-   nao_sei_o_nome(&temp);
+/*void inserir_tempo(tempo temp){
+   armazenar_a_hora(&temp);
    imprimir_tempo(temp);
-} 
+} */
 
 
 
-int nao_sei_o_nome(tempo *temp){
+void armazenar_a_hora(tempo *temp){
     time_t currentTime;
     struct tm *timeinfo;
     currentTime= time(NULL);
@@ -18,6 +18,16 @@ int nao_sei_o_nome(tempo *temp){
     set_hora(temp,timeinfo->tm_hour);
     set_min(temp,timeinfo->tm_min);
     set_seg(temp,timeinfo->tm_sec);
+}
+
+void armazenar_a_hora_final(tempofinal *tempfim){
+    time_t currentTime;
+    struct tm *timeinfo;
+    currentTime= time(NULL);
+    timeinfo = localtime(&currentTime);
+    set_horafi(tempfim,timeinfo->tm_hour);
+    set_minfi(tempfim,timeinfo->tm_min);
+    set_segfi(tempfim,timeinfo->tm_sec);
 }
 //achei do jeito que fiz a funçao acima meio feio, entao se acharem um jeito melhor podem mudar.*/
 
@@ -77,3 +87,30 @@ void imprimir_hora_arquivo(tempo *temp){
     fclose(impressao);
 }
 // Apagar essa main quando for rodar com a main principal
+//tempo final agora;
+
+void set_horafi(tempofinal *temp, int hour){
+        temp->hora = hour;
+}
+
+int get_horafi(tempofinal temp){ 
+  return temp.hora;
+}
+
+//min
+void set_minfi(tempofinal *temp, int min){
+    temp->min = min;
+}
+
+int get_minfi(tempofinal temp){
+  return temp.min;
+}
+
+//segundos
+void set_segfi(tempofinal *temp, int sec){
+    temp->seg = sec;
+}
+
+int get_segfi(tempofinal temp){
+  return temp.seg;
+}

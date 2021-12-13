@@ -20,7 +20,7 @@ void set_preenche(Vetor_Celula *celula, int numero_celulas){
         celula[i].celula_proxima = 10 * i;
         set_PID(&(celula[i].pid));
         set_Prioridade(&(celula[i].pid));
-        nao_sei_o_nome(&(celula[i].pid.time));
+        armazenar_a_hora(&(celula[i].pid.time));
     }
 }
 
