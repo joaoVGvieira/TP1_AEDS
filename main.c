@@ -15,9 +15,9 @@ int main(void){
     cria_lista_processo(num);
     printf("\n\n");
     //teste de impressão
-    int hora, minuto, segundo;
+
     //imprimindo o tempo
-    //imprimir(hora, minuto, segundo);
+
     //inserir_tempo();
     system("pause");
     return 0;

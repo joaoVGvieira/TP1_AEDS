@@ -9,7 +9,7 @@ typedef struct
 }tempo;
 
 
-//tempo inserir_tempo();
+void inserir_tempo(tempo temp);
 
 int nao_sei_o_nome(tempo *temp);
 //hora
@@ -27,7 +27,6 @@ int get_min(tempo temp);
 void set_seg(tempo *temp, int sec);
 
 int get_seg(tempo temp);
-
 
 void imprimir_tempo(tempo temp);
 
