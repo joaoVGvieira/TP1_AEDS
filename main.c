@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Libs/lista_Processos.h"
+#include "Libs/mani_arquivo.h"
 //#include "Sources/lista_Processos.c" 
 
 int main(void){
@@ -13,8 +14,10 @@ int main(void){
     int num = 10;
     cria_lista_processo(num);
     printf("\n\n");
-
+    //teste de impressão
+    int hora, minuto, segundo;
     //imprimindo o tempo
+    //imprimir(hora, minuto, segundo);
     //inserir_tempo();
     system("pause");
     return 0;
