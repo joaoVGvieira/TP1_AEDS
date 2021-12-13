@@ -4,4 +4,3 @@
 
 FILE *abrir();
 void fechar(FILE *);
-void imprimir(int hora, int minuto, int segundo);

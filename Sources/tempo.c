@@ -6,7 +6,6 @@
 void inserir_tempo(tempo temp){
    nao_sei_o_nome(&temp);
    imprimir_tempo(temp);
-   return temp;
 } 
 
 
@@ -19,8 +18,6 @@ int nao_sei_o_nome(tempo *temp){
     set_hora(temp,timeinfo->tm_hour);
     set_min(temp,timeinfo->tm_min);
     set_seg(temp,timeinfo->tm_sec);
-    imprimir_hora_arquivo(temp);
-  
 }
 //achei do jeito que fiz a funçao acima meio feio, entao se acharem um jeito melhor podem mudar.*/
 
@@ -56,7 +53,6 @@ void imprimir_tempo(tempo temp){
    printf("Tempo do sistema --> %.2d:%.2d:%.2d\n\n",get_hora(temp),get_min(temp),get_seg(temp));
 }
 
-
 //depois pensar como passasr essa funçao abaixo para mani_arquivo.h e mani_arquivo.c
 void imprimir_hora_arquivo(tempo *temp){
   FILE *impressao = NULL;
@@ -81,9 +77,3 @@ void imprimir_hora_arquivo(tempo *temp){
     fclose(impressao);
 }
 // Apagar essa main quando for rodar com a main principal
-int main()
-{
-  tempo temp;
-  inserir_tempo(temp);
-  return 0;
-}

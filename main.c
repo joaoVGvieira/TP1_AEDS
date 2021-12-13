@@ -8,17 +8,12 @@
 int main(void){
 
     //Primeira funçao vai ser ler um arquivo;
-    
+    tempo temp;
     //inserir_tempo();
 
     int num = 10;
     cria_lista_processo(num);
     printf("\n\n");
-    //teste de impressão
-
-    //imprimindo o tempo
-
-    //inserir_tempo();
     system("pause");
     return 0;
 }

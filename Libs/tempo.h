@@ -30,3 +30,4 @@ int get_seg(tempo temp);
 
 void imprimir_tempo(tempo temp);
 
+void imprimir_hora_arquivo(tempo *temp);

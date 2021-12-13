@@ -35,4 +35,5 @@ int get_inprime(Vetor_Celula *celula, int numero_celulas){
         //printf("Hora: ");
 
     }
+    imprimir_hora_arquivo(&(celula->pid.time));
 }

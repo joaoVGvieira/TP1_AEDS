@@ -13,7 +13,7 @@ void fechar(FILE *f){
         printf("Fechou.\n");
     }
 }
-void imprimir(hora, minuto, segundo){
+/*void imprimir(hora, minuto, segundo){
     FILE *impressao = NULL;
     char shora[2], sminuto[2], ssegundo[2];
     sprintf(shora, "%d", hora);
@@ -32,4 +32,4 @@ void imprimir(hora, minuto, segundo){
     fputs(ssegundo, impressao);
     fputc('\n', impressao);
     fclose(impressao);
-}
+}*/
