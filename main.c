@@ -6,7 +6,7 @@
 int main(void){
 
     int operacao_sistema,num;
-    char nome[] = ("arquivo_teste/teste100000.txt"); 
+    char nome[] = ("arquivo_teste/teste.txt"); 
     do {
     menu();
     scanf("%d",&operacao_sistema);

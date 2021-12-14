@@ -27,7 +27,9 @@ void ler(char nome[]){
     for (int i = 0; i < NLO; i++)
     {
         fscanf(file,"%d %d",&Op,&Qt);
-        printf("OP=%d\nQT=%d\n",Op, Qt);
+        printf("OP=%d\n",Op);
+        printf("QT=%d\n",Qt);
+        printf("\n");
     }
     
     fclose(file);
