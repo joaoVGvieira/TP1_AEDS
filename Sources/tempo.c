@@ -20,17 +20,6 @@ void armazenar_a_hora(tempo *temp){
     set_seg(temp,timeinfo->tm_sec);
 }
 
-void armazenar_a_hora_final(tempofinal *tempfim){
-    time_t currentTime;
-    struct tm *timeinfo;
-    currentTime= time(NULL);
-    timeinfo = localtime(&currentTime);
-    set_horafi(tempfim,timeinfo->tm_hour);
-    set_minfi(tempfim,timeinfo->tm_min);
-    set_segfi(tempfim,timeinfo->tm_sec);
-}
-//achei do jeito que fiz a funçao acima meio feio, entao se acharem um jeito melhor podem mudar.*/
-
 //hora
 void set_hora(tempo *temp, int hour){
         temp->hora = hour;
@@ -85,32 +74,4 @@ void imprimir_hora_arquivo(tempo *temp){
     fputs(ssegundo, impressao);
     fputc('\n', impressao);
     fclose(impressao);
-}
-// Apagar essa main quando for rodar com a main principal
-//tempo final agora;
-
-void set_horafi(tempofinal *temp, int hour){
-        temp->hora = hour;
-}
-
-int get_horafi(tempofinal temp){ 
-  return temp.hora;
-}
-
-//min
-void set_minfi(tempofinal *temp, int min){
-    temp->min = min;
-}
-
-int get_minfi(tempofinal temp){
-  return temp.min;
-}
-
-//segundos
-void set_segfi(tempofinal *temp, int sec){
-    temp->seg = sec;
-}
-
-int get_segfi(tempofinal temp){
-  return temp.seg;
 }
