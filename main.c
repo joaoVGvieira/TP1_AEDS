@@ -5,26 +5,26 @@
 #include "Libs/menu.h"
 int main(void){
 
-    int operacao_sistema;
-    while (operacao_sistema!=0)
-    {
-        menu();
-        scanf("%d",&operacao_sistema);
+    int operacao_sistema,num;
+    char nome[] = ("arquivo_teste/teste100000.txt"); 
+    do {
+    menu();
+    scanf("%d",&operacao_sistema);
+    switch (operacao_sistema) {
+        case 0:
+        printf("\n\n-----Volte sempre!!!-----\n\n"); 
+            break;
+        case 1: 
+            num = 10;
+            cria_lista_processo(num);
+            break;
+        case 2: 
+            ler(nome);
+            break;
+        default:
+            printf("\n\n-----Opção inválida!!!!-----\n\n");
     }
-    
-  
-
-
-    char nome[] = ("arquivo_teste/teste100000.txt");
-
-
-   
-    ler(nome);
-    //Primeira funçao vai ser ler um arquivo;
-    //inserir_tempo();
-
-    int num = 10;
-    cria_lista_processo(num);
+} while (operacao_sistema != 0);
 
     system("pause");
     return 0;
