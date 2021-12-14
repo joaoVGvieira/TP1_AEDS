@@ -1,7 +1,7 @@
 #include "../Libs/lista_Processos.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <time.h>
 void cria_lista_processo(int numero_celulas){
     Vetor_Celula *vetor_celula;
     criar_vetor_celula(&vetor_celula, numero_celulas);
@@ -15,6 +15,7 @@ void criar_vetor_celula(Vetor_Celula **celula, int numero_celulas){
 
 void set_preenche(Vetor_Celula *celula, int numero_celulas){
     int i;
+    srand(time(NULL));
     for(i = 0; i < numero_celulas; i++){
         celula[i].celula_anterior = i;
         celula[i].celula_proxima = 10 * i;
