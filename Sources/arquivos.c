@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+// Vai ler o arquivo de teste
 void ler(char nome[]){
     FILE *file = fopen(nome,"r");
     if(file==NULL){
@@ -33,15 +34,14 @@ void ler(char nome[]){
     
     fclose(file);
 }
-
+// vai escrever o arquivo de saida
 void escreve(char arquivo_saida[],clock_t tempo_execu ){
     char tempo[20];
     FILE *saida = fopen(arquivo_saida, "a");
     if(saida) {
         sprintf(tempo, "%f ", ((float)tempo_execu)/CLOCKS_PER_SEC);
         fputs(tempo, saida);
-        fprintf(saida,"milisegundos");
-        fputc('\n', saida);
+        fprintf(saida,"milisegundos\n");
         fclose(saida);
 
     } else

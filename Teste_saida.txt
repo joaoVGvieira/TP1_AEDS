@@ -1,4 +1,8 @@
-0.000868 milisegundos
-0.000596 milisegundos
-0.000571 milisegundos
-0.000577 milisegundos
+0.000152 milisegundos
+0.000122 milisegundos
+0.000115 milisegundos
+0.000096 milisegundos
+0.000132 milisegundos
+0.000069 milisegundos
+0.000125 milisegundos
+0.000258 milisegundos

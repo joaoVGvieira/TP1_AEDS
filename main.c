@@ -19,6 +19,7 @@ int main(void){
         case 1: 
             break;
         case 2:
+            tempo_execu = clock();
             ler(nome);
             tempo_execu =  clock()- tempo_execu;
             escreve(arquivo_saida, tempo_execu);
