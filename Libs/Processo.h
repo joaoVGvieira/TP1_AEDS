@@ -9,7 +9,7 @@ typedef struct
 } Processos; 
 
 
-void implementar(Processos *Processo, int PID, int Prioridade);
+void implementar_processo(Processos *Processo);
 
 
 /*
@@ -20,7 +20,7 @@ Prioridade: Aleatorio(1 a 5);
 
 //PID:
 void set_PID(Processos *Processo);
-int get_PID(Processos Processo);
+int get_PID(Processos *Processo);
 
 //Prioridade:
 

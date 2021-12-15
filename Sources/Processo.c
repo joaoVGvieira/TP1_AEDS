@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 
-void implementar(Processos *Processo, int PID,int Prioridade){
+void implementar_processo(Processos *Processo){
     set_PID(Processo);
     //inserir_tempo();
     //Qualquer crar int para o tempo;
@@ -13,8 +13,8 @@ void implementar(Processos *Processo, int PID,int Prioridade){
 void set_PID(Processos *Processo){
      Processo->PID = rand() % 9999;
 }
-int get_PID(Processos Proceso){
-    return Proceso.PID;
+int get_PID(Processos *Proceso){
+    return Proceso->PID;
 }
 
 // Funcao abaixo limita o cunjuto entre [1,5];
