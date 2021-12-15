@@ -18,6 +18,7 @@ void armazenar_a_hora(tempo *temp){
     set_hora(temp,timeinfo->tm_hour);
     set_min(temp,timeinfo->tm_min);
     set_seg(temp,timeinfo->tm_sec);
+    imprimir_hora_arquivo(temp);
 }
 
 void tempo_final(tempofi *temp){
@@ -28,6 +29,7 @@ void tempo_final(tempofi *temp){
     set_horafi(temp,timeinfo->tm_hour);
     set_minfi(temp,timeinfo->tm_min);
     set_segfi(temp,timeinfo->tm_sec);
+    imprimir_horafinal_arquivo(temp);
 }
 //hora
 void set_hora(tempo *temp, int hour){
