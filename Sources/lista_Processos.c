@@ -69,18 +69,18 @@ void preenche_vetor(Vetor_Celula *celula, int qtd_operacao){
             else if (menor_pid < pid_atual < maior_pid){
                 int pid_comparacao = get_PID(&(celula[menor_pid].processo));
                 int posi_pid_comparacao = menor_pid;
-                while (pid_atual < pid_comparacao){
+                while (pid_comparacao <= pid_atual){
                     int pid_comparacao = get_PID(&(celula[celula[posi_pid_comparacao].celula_proxima].processo));
                     int posi_pid_comparacao = celula[posi_pid_comparacao].celula_proxima;
-                        if(pid_atual >= pid_comparacao){
-                            set_celula_anterior(&(celula[aux]), posi_pid_comparacao);
-                            lista_processo->celula_disponivel = celula[aux].celula_proxima;
-                            set_celula_proxima(&(celula[aux]), celula[posi_pid_comparacao].celula_proxima);
-                            set_celula_proxima(&(celula[posi_pid_comparacao]), aux);
-                            set_celula_anterior(&(celula[celula[posi_pid_comparacao].celula_proxima]), posi_pid_comparacao);
-                            lista_processo->quantidade_celulas_ocupadas ++;
-                            break;
-                        }
+                    if(pid_atual < pid_comparacao){
+                        lista_processo->celula_disponivel = celula[aux].celula_proxima;
+                        set_celula_anterior(&(celula[aux]), celula[posi_pid_comparacao].celula_anterior);
+                        set_celula_proxima(&(celula[aux]), posi_pid_comparacao);
+                        set_celula_anterior(&(celula[posi_pid_comparacao]), aux);
+                        set_celula_proxima(&(celula[celula[posi_pid_comparacao].celula_anterior]), aux);
+                        lista_processo->quantidade_celulas_ocupadas ++;
+                        break;
+                    }
                 }
                 
             }
