@@ -66,7 +66,7 @@ void imprimir_tempo(tempo temp){
 
 
 //depois pensar como passasr essa funçao abaixo para mani_arquivo.h e mani_arquivo.c
-void imprimir_hora_arquivo(tempo *temp, tempofi *tempofi){
+void imprimir_hora_arquivo(tempo *temp){
   FILE *impressao = NULL;
     char shora[4], sminuto[4], ssegundo[4];
 
@@ -121,8 +121,4 @@ int main(){
   tempofi tempi;
   armazenar_a_hora(&temp);
   tempo_final(&tempi);
-  imprimir_tempo(temp);
-  imprimir_final_tempo(tempi);
-
-
 }*/
