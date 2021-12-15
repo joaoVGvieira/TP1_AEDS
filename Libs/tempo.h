@@ -16,7 +16,7 @@ typedef struct
 }tempo;
 
 
-//void inserir_tempo(tempo temp);
+void inserir_tempo(tempo temp);
 
 void armazenar_a_hora(tempo *temp);
 
@@ -65,3 +65,4 @@ void set_segfi(tempofi *temp, int sec);
 int get_segfi(tempofi temp);
 
 void imprimir_final_tempo(tempofi temp);
+void imprimir_horafinal_arquivo(tempofi *temp);

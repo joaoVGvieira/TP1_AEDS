@@ -7,7 +7,7 @@ void inicializa_vetor(int total_celulas){
     criar_vetor_celula(&vetor_celula, total_celulas);
     organizacao_vetor(vetor_celula, total_celulas);
     preenche_vetor(vetor_celula, total_celulas);
-    inprime_vetor(vetor_celula, total_celulas);
+    //inprime_vetor(vetor_celula, total_celulas);
 }
 
 void criar_vetor_celula(Vetor_Celula **celula, int total_celulas){
@@ -103,22 +103,16 @@ void set_celula_proxima(Vetor_Celula *celula, int posicao){
 
 //int get_celula_proxima(Vetor_Celula celula, int posicao);
 
-int imprime_vetor(Vetor_Celula *celula, int numero_celulas){
+/*int imprime_vetor(Vetor_Celula *celula, int numero_celulas){
     int i;
     for(i = 0; i < numero_celulas; i++){
-       // printf("PID: %d\n", get_PID(&(celula)))
+       printf("PID: %d\n", get_PID(&(celula)))
 
-        //imprimir_tempo((celula[i].processo.time));
+       imprimir_tempo((celula[i].processo.time));
 
         //printf("Hora: ");
 
     }
     //imprimir_hora_arquivo(&(celula->processo.time));
-}
+}*/
 
-int main(){
-    int total = 10;
-    inicializa_vetor(total);
-    system("pause");
-    return 0;
-}

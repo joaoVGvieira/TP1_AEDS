@@ -3,10 +3,10 @@
 #include <stdio.h>
 #include <time.h>
 
-/*void inserir_tempo(tempo temp){
+void inserir_tempo(tempo temp){
    armazenar_a_hora(&temp);
    imprimir_tempo(temp);
-} */
+}
 
 
 
@@ -21,9 +21,6 @@ void armazenar_a_hora(tempo *temp){
 }
 
 void tempo_final(tempofi *temp){
-    int a;
-    printf("Digit A;");
-    scanf("%d",&a);
     time_t currentTime;
     struct tm *timeinfo;
     currentTime= time(NULL);
@@ -89,6 +86,30 @@ void imprimir_hora_arquivo(tempo *temp){
     fclose(impressao);
 }
 
+void imprimir_horafinal_arquivo(tempofi *temp){
+  FILE *impressao = NULL;
+    char shora[4], sminuto[4], ssegundo[4];
+
+    sprintf(shora, "%.2d", temp->hora);
+    sprintf(sminuto, "%.2d", temp->min);
+    sprintf(ssegundo, "%.2d", temp->seg);
+    impressao = fopen("Impressão.txt", "a");
+    if(impressao == NULL){
+        printf("Erro na abertura de impressão!\n\n");
+        system("pause");
+        exit(1);
+    }
+    fputs(shora, impressao);
+    fputs(":", impressao);
+    fputs(sminuto, impressao);
+    fputs(":", impressao);
+    fputs(ssegundo, impressao);
+    fputc('\n', impressao);
+    fclose(impressao);
+}
+
+
+// TEMPO FINAL
 //hora
 void set_horafi(tempofi *temp, int hour){
         temp->hora = hour;

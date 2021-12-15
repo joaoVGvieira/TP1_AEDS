@@ -4,7 +4,7 @@
 #include "Libs/arquivos.h"
 #include "Libs/menu.h"
 int main(void){
-
+    tempo temp;
     int operacao_sistema,num;
     char nome[] = ("arquivo_teste/teste.txt"); 
     do {
@@ -15,12 +15,14 @@ int main(void){
         printf("\n\n-----Volte sempre!!!-----\n\n"); 
             break;
         case 1: 
-            num = 10;
-            cria_lista_processo(num);
             break;
-        case 2: 
+        case 2:
             ler(nome);
             break;
+        case 3:
+            //teste tempo
+            inserir_tempo(temp);
+            break;    
         default:
             printf("\n\n-----Opção inválida!!!!-----\n\n");
     }
