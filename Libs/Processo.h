@@ -1,22 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "tempo.h"
+#include <time.h>
+
+typedef struct 
+{
+    int hora;
+    int min;
+    int seg;
+}tempo;
+
 typedef struct
 {
     int PID;
-    //tempo time;
+    tempo temp;
     int Prioridade;
 } Processos; 
 
+//Adiciona hora no struct tempo;
+void hora_Atual(Processos *Processo);
 
 void implementar_processo(Processos *Processo);
-
-
-/*
----------Alocar o processor-----------------
-PID: Aleatorio
-Prioridade: Aleatorio(1 a 5);
-*/
 
 //PID:
 void set_PID(Processos *Processo);

@@ -2,15 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <time.h>
 void ler(char nome[]){
     FILE *file = fopen(nome,"r");
     if(file==NULL){
-        printf("Erro para abrir o arquivo!!!!");
+        printf("Erro para abrir o arquivo de leitura!!!!");
         exit(1);
     }
-    printf("\n\nAberto com sucesso!!!!\n\n");
-
     int N;
     // Tamanho do vetor para cursores
     int NLO;
@@ -27,11 +25,25 @@ void ler(char nome[]){
     for (int i = 0; i < NLO; i++)
     {
         fscanf(file,"%d %d",&Op,&Qt);
+        /*
         printf("OP=%d\n",Op);
         printf("QT=%d\n",Qt);
-        printf("\n");
+        printf("\n");*/
     }
     
     fclose(file);
 }
 
+void escreve(char arquivo_saida[],clock_t tempo_execu ){
+    char tempo[20];
+    FILE *saida = fopen(arquivo_saida, "a");
+    if(saida) {
+        sprintf(tempo, "%f ", ((float)tempo_execu)/CLOCKS_PER_SEC);
+        fputs(tempo, saida);
+        fprintf(saida,"milisegundos");
+        fputc('\n', saida);
+        fclose(saida);
+
+    } else
+        printf("\nERRO ao abrir arquivo de saida!\n");
+}
