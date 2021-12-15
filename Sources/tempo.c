@@ -20,6 +20,18 @@ void armazenar_a_hora(tempo *temp){
     set_seg(temp,timeinfo->tm_sec);
 }
 
+void tempo_final(tempofi *temp){
+    int a;
+    printf("Digit A;");
+    scanf("%d",&a);
+    time_t currentTime;
+    struct tm *timeinfo;
+    currentTime= time(NULL);
+    timeinfo = localtime(&currentTime);
+    set_horafi(temp,timeinfo->tm_hour);
+    set_minfi(temp,timeinfo->tm_min);
+    set_segfi(temp,timeinfo->tm_sec);
+}
 //hora
 void set_hora(tempo *temp, int hour){
         temp->hora = hour;
@@ -52,8 +64,9 @@ void imprimir_tempo(tempo temp){
    printf("Tempo do sistema --> %.2d:%.2d:%.2d\n\n",get_hora(temp),get_min(temp),get_seg(temp));
 }
 
+
 //depois pensar como passasr essa funçao abaixo para mani_arquivo.h e mani_arquivo.c
-void imprimir_hora_arquivo(tempo *temp){
+void imprimir_hora_arquivo(tempo *temp, tempofi *tempofi){
   FILE *impressao = NULL;
     char shora[4], sminuto[4], ssegundo[4];
 
@@ -75,3 +88,41 @@ void imprimir_hora_arquivo(tempo *temp){
     fputc('\n', impressao);
     fclose(impressao);
 }
+
+//hora
+void set_horafi(tempofi *temp, int hour){
+        temp->hora = hour;
+}
+
+int get_horafi(tempofi temp){ 
+  return temp.hora;
+}
+
+//min
+void set_minfi(tempofi *temp, int min){
+    temp->min = min;
+}
+
+int get_minfi(tempofi temp){
+  return temp.min;
+}
+
+//segundos
+void set_segfi(tempofi *temp, int sec){
+    temp->seg = sec;
+}
+
+int get_segfi(tempofi temp){
+  return temp.seg;
+}
+/*
+int main(){
+  tempo temp;
+  tempofi tempi;
+  armazenar_a_hora(&temp);
+  tempo_final(&tempi);
+  imprimir_tempo(temp);
+  imprimir_final_tempo(tempi);
+
+
+}*/
