@@ -4,7 +4,7 @@
 typedef struct
 {
     int PID;
-    tempo time;
+    //tempo time;
     int Prioridade;
 } Processos; 
 

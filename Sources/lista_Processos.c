@@ -6,8 +6,8 @@ void inicializa_vetor(int total_celulas){
     Vetor_Celula *vetor_celula;
     criar_vetor_celula(&vetor_celula, total_celulas);
     organizacao_vetor(vetor_celula, total_celulas);
-    set_preenche(vetor_celula, total_celulas);
-    get_inprime(vetor_celula, total_celulas);
+    preenche_vetor(vetor_celula, total_celulas);
+    inprime_vetor(vetor_celula, total_celulas);
 }
 
 void criar_vetor_celula(Vetor_Celula **celula, int total_celulas){
@@ -35,6 +35,9 @@ void preenche_vetor(Vetor_Celula *celula, int qtd_operacao){
     for(i = 0; i < qtd_operacao; i++){
         srand((unsigned)time(NULL));
         int aux = lista_processo->celula_disponivel;
+        if (celula[aux].celula_proxima == -1){
+            break;
+        }
         if(lista_processo->quantidade_celulas_ocupadas == 0){
             implementar_processo(&(celula[aux].processo));
             lista_processo->posicao_maior_pid = aux;
@@ -103,13 +106,19 @@ void set_celula_proxima(Vetor_Celula *celula, int posicao){
 int imprime_vetor(Vetor_Celula *celula, int numero_celulas){
     int i;
     for(i = 0; i < numero_celulas; i++){
-        printf("Anterior: %d // Proximo: %d //", celula[i].celula_anterior, celula[i].celula_proxima);
-        printf("PID: %d // Prioridade: %d\n", get_PID(&(celula[i].processo)), get_Prioridade((celula[i].processo)));
+       // printf("PID: %d\n", get_PID(&(celula)))
 
-        imprimir_tempo((celula[i].processo.time));
+        //imprimir_tempo((celula[i].processo.time));
 
         //printf("Hora: ");
 
     }
-    imprimir_hora_arquivo(&(celula->processo.time));
+    //imprimir_hora_arquivo(&(celula->processo.time));
+}
+
+int main(){
+    int total = 10;
+    inicializa_vetor(total);
+    system("pause");
+    return 0;
 }
