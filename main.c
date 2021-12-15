@@ -5,7 +5,6 @@
 #include "Libs/menu.h"
 int main(void){
     tempo temp;
-    tempofi *temp_final;
     int operacao_sistema,num;
     char nome[] = ("arquivo_teste/teste.txt"); 
     do {
@@ -23,7 +22,6 @@ int main(void){
         case 3:
             //teste tempo
             inserir_tempo(temp);
-            tempofi(tempo_final);
             break;    
         default:
             printf("\n\n-----Opção inválida!!!!-----\n\n");
