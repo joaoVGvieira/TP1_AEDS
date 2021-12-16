@@ -7,14 +7,13 @@ void inicializa_vetor(int total_celulas){
     Lista_Processo lista_processo;
     criar_vetor_celula(&vetor_celula, total_celulas);
     organizacao_vetor(vetor_celula, &lista_processo, total_celulas);
+    //srand((unsigned)time(NULL)); // Precissa estar na nossa main para funcionar corretamente
     preenche_vetor(vetor_celula, &lista_processo, total_celulas);
     imprime_vetor(vetor_celula,&lista_processo, total_celulas);
 }
-
 void criar_vetor_celula(Vetor_Celula **celula, int total_celulas){
     (*celula) = (Vetor_Celula*) malloc(total_celulas * sizeof(Vetor_Celula));
 }
-
 void organizacao_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int total_celulas){
     int i;
     for(i = 0; i < total_celulas; i++){
@@ -32,13 +31,9 @@ void organizacao_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int
     }
 }
 void preenche_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int qtd_operacao){
-    int i, sair = 0;
-    srand((unsigned)time(NULL));
+    int i;
     for(i = 0; i < qtd_operacao; i++){
         int aux = (lista_processo->celula_disponivel);
-        if(lista_processo->quantidade_celulas_ocupadas == lista_processo->total_celulas || celula[aux].celula_proxima == -1){
-            sair = 1;
-        }
         if(lista_processo->quantidade_celulas_ocupadas == 0){
             implementar_processo(&(celula[aux].processo));
             lista_processo->posicao_maior_pid = aux;
@@ -89,9 +84,25 @@ void preenche_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int qt
             
             }
         }
-        if (sair == 1){
+        if(lista_processo->quantidade_celulas_ocupadas == lista_processo->total_celulas){
             break;
         }
+    }
+}
+
+void retirar_menor_pid(Vetor_Celula *celula, Lista_Processo *lista_processo, int qtd_operacao){
+    int i;
+    int posi_menor_pid = lista_processo->posicao_menor_pid;
+    for(i = 0; i < qtd_operacao; i++){
+        if(lista_processo->quantidade_celulas_ocupadas == 0){
+            break;
+        }
+        lista_processo->posicao_menor_pid = celula[posi_menor_pid].celula_proxima;
+        set_celula_anterior(&(celula[celula[posi_menor_pid].celula_proxima]), -1);
+        set_celula_proxima(&(celula[posi_menor_pid]), lista_processo->celula_disponivel);
+        lista_processo->celula_disponivel = posi_menor_pid;
+        lista_processo->quantidade_celulas_ocupadas--;
+        posi_menor_pid = lista_processo->posicao_menor_pid;
     }
 }
 
@@ -111,14 +122,6 @@ int get_celula_proxima(Vetor_Celula *celula){
     return celula->celula_proxima;
 }
 
-void set_celula_disponivel(Lista_Processo *lista_processo, int celula_disponivel){
-    lista_processo->celula_disponivel = celula_disponivel;
-}
-
-int get_celula_disponivel(Lista_Processo *lista_processo){
-    return lista_processo->celula_disponivel;
-}
-// Esse imprime vetor so esta para eu Iury testa
 int imprime_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int numero_celulas){
     int i;
     int posicao_pid = lista_processo->posicao_menor_pid;
@@ -133,15 +136,19 @@ int imprime_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int nume
             printf("%.2d -> ", posicao_pid);
             printf("%d\n", get_PID(&(celula[posicao_pid].processo)));
             posicao_pid = celula[posicao_pid].celula_proxima;
-
-        //imprimir_tempo((celula[i].processo.time));
-        //printf("Hora: ");
     }
-    //imprimir_hora_arquivo(&(celula->processo.time));
 }
+/* Serve para testar se esta organizando os elementos
+int main(){
+    int a = 15;
+    srand((unsigned)time(NULL)); // Precissa estar na nossa main para funcionar corretamente
+    inicializa_vetor(a);
+    printf("\n");
+    system("pause");
+    return 0;
+} */
 
-
-/*int imprime_vetor(Vetor_Celula *celula, int numero_celulas){
+/*int imprime_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int numero_celulas){
     int i;
     for(i = 0; i < numero_celulas; i++){
        printf("PID: %d\n", get_PID(&(celula)))
