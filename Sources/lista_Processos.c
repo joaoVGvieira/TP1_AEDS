@@ -35,7 +35,6 @@ void preenche_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int qt
     int i, sair = 0;
     srand((unsigned)time(NULL));
     for(i = 0; i < qtd_operacao; i++){
-        //srand((unsigned)time(NULL));
         int aux = (lista_processo->celula_disponivel);
         if(lista_processo->quantidade_celulas_ocupadas == lista_processo->total_celulas || celula[aux].celula_proxima == -1){
             sair = 1;
@@ -89,24 +88,6 @@ void preenche_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int qt
                 }
             
             }
-            /*
-            else if (menor_pid < pid_atual < maior_pid){
-                int pid_comparacao = get_PID(&(celula[posi_menor_pid].processo));
-                int posi_pid_comparacao = lista_processo->posicao_menor_pid;
-                while (pid_comparacao <= pid_atual){
-                    pid_comparacao = get_PID(&(celula[celula[posi_pid_comparacao].celula_proxima].processo));
-                    posi_pid_comparacao = celula[posi_pid_comparacao].celula_proxima;
-                    if(pid_comparacao > pid_atual){
-                        lista_processo->celula_disponivel = celula[aux].celula_proxima;
-                        set_celula_anterior(&(celula[aux]), celula[posi_pid_comparacao].celula_anterior);
-                        set_celula_proxima(&(celula[aux]), posi_pid_comparacao);
-                        set_celula_anterior(&(celula[posi_pid_comparacao]), aux);
-                        set_celula_proxima(&(celula[celula[posi_pid_comparacao].celula_anterior]), aux);
-                        lista_processo->quantidade_celulas_ocupadas ++;
-                    }
-                }
-                
-            } */
         }
         if (sair == 1){
             break;
