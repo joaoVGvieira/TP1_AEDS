@@ -31,6 +31,6 @@ void set_Prioridade(Processos *Processo){
     Processo->Prioridade= 1 + rand() % 5;
 }
 
-int get_Prioridade(Processos Proceso){
-    return Proceso.Prioridade;
+int get_Prioridade(Processos *Proceso){
+    return Proceso->Prioridade;
 }

@@ -28,5 +28,5 @@ int get_PID(Processos *Processo);
 //Prioridade:
 
 void set_Prioridade(Processos *Processo);
-int get_Prioridade(Processos Processo);
+int get_Prioridade(Processos *Processo);
 
