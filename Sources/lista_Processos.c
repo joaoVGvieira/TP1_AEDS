@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+/*
 void inicializa_vetor(int total_celulas){
     Vetor_Celula *vetor_celula;
     Lista_Processo lista_processo;
@@ -11,6 +12,7 @@ void inicializa_vetor(int total_celulas){
     preenche_vetor(vetor_celula, &lista_processo, total_celulas);
     imprime_vetor(vetor_celula,&lista_processo, total_celulas);
 }
+*/
 void criar_vetor_celula(Vetor_Celula **celula, int total_celulas){
     (*celula) = (Vetor_Celula*) malloc(total_celulas * sizeof(Vetor_Celula));
 }
@@ -133,14 +135,14 @@ int imprime_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int nume
         if (posicao_pid == -1){
             break;
         }
-            printf("%.2d -> ", posicao_pid);
+            printf("%.3d -> ", posicao_pid);
             printf("%d\n", get_PID(&(celula[posicao_pid].processo)));
             posicao_pid = celula[posicao_pid].celula_proxima;
     }
 }
-/* Serve para testar se esta organizando os elementos
+/* Serve para testar se esta organizando os elementos 
 int main(){
-    int a = 15;
+    int a = 1000;
     srand((unsigned)time(NULL)); // Precissa estar na nossa main para funcionar corretamente
     inicializa_vetor(a);
     printf("\n");

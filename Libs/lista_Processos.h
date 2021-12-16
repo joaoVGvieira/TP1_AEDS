@@ -17,7 +17,7 @@ typedef struct{
     int total_celulas;
 }Lista_Processo;
 
-void inicializa_vetor(int total_celulas);
+//void inicializa_vetor(int total_celulas);
 
 void criar_vetor_celula(Vetor_Celula **celula, int total_celulas);
 

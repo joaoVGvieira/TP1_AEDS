@@ -1,4 +1,5 @@
 #include "../Libs/arquivos.h"
+#include "../Libs/lista_Processos.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,21 +18,33 @@ void ler(char nome[]){
     int Op, Qt;
     // Op = 0 para inserção e 1 para remoção início
     // Qt = quantidade de vezes que a operação será realizada
+
+    Vetor_Celula *vetor_celula;
+    Lista_Processo lista_processo;
+    srand((unsigned)time(NULL));
     
     if (file)
     {
         fscanf(file,"%d\n",&N);
         fscanf(file,"%d\n",&NLO);
     }
+    criar_vetor_celula(&vetor_celula, N);
+    organizacao_vetor(vetor_celula, &lista_processo, N);
     for (int i = 0; i < NLO; i++)
     {
         fscanf(file,"%d %d",&Op,&Qt);
+        if (Op == 0){
+            preenche_vetor(vetor_celula, &lista_processo, Qt);
+        }
+        if (Op == 1){
+            retirar_menor_pid(vetor_celula, &lista_processo, Qt);
+        }
         /*
         printf("OP=%d\n",Op);
         printf("QT=%d\n",Qt);
         printf("\n");*/
     }
-    
+    imprime_vetor(vetor_celula,&lista_processo, N);
     fclose(file);
 }
 // vai escrever o arquivo de saida
