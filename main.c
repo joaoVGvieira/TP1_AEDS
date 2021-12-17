@@ -5,30 +5,34 @@
 #include "Libs/menu.h"
 int main(void){
     int operacao_sistema;
-    int N;
     clock_t tempo_execu;
     tempo_execu = clock();
-    char nome[] = ("arquivo_teste/teste.txt"); 
-    char arquivo_saida[]=("Teste_saida.txt");
-    menu();
-    scanf("%d",&operacao_sistema);
-    switch (operacao_sistema) {
+    //("arquivo_teste/teste.txt"); se for usar de outra pasta usa assim
+    char arquivo_saida[1000];
+    do
+    {
+        printf("\n");
+        menu();
+        scanf("%d",&operacao_sistema);
+        switch (operacao_sistema) {
         case 0:
             printf("\n\n-----Volte sempre!!!-----\n\n"); 
             break;
         case 1:
-            printf("DIGITE O TAMANHO N DO VETOR:");
-            scanf("%d",&N);
+            printf("\n");
+            menu_interativo();
             break;
         case 2:
             tempo_execu = clock();
-            ler(nome);
+            ler();
+            menu_arquivo();
             tempo_execu =  clock()- tempo_execu;
-            escreve(arquivo_saida, tempo_execu);
+            escreve_arquivo_tempo(tempo_execu);
             break;  
         default:
             printf("\n\n-----Opção inválida!!!!-----\n\n");
-    }
+        }
+    } while (operacao_sistema!=0);
     system("pause");
     return 0;
 }

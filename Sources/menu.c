@@ -4,27 +4,51 @@
 
  void menu(){
         printf(
+               " _________________(MENU PRINCIPAL)___________________ \n"
                "|                                                    |\n"
                "| ESCOLHA UMA DAS SEGUINTES FORMAS DE INICIALIZACAO: |\n"
                "|                                                    |\n"
                "| INTERATIVO = 1                                     |\n"
                "| POR ARQUIVO = 2                                    |\n"
                "| ENCERRAR OPERACOES = 0                             |\n"
-               "|                                                    |\n");
+               "|____________________________________________________|\n");
         printf("DIGITE A OPERACAO DESEJADA: ");
     }
 
-void menu_arquivo(){
-       printf("1.digitar para nome do arquivo para leitura");
-}
+
+
 void menu_interativo(){
-       printf(
+       int N,opcao;
+       printf("DIGITE O TAMANHO N DO VETOR PARA INICIALIZA-LO:");
+       scanf("%d",&N);
+       do
+       { 
+       printf("\n");
+       printf(  
+               " _________________(MENU INTERATIVO)__________________\n"
                "|                                                    |\n"
+               "| INSERIR  = 1                                       |\n"
+               "| REMOVER  = 2                                       |\n"
+               "| IMPRIMIR = 3                                       |\n"
+               "| ENCERRAR OPERACOES = 0                             |\n"
+               "|____________________________________________________|\n");
+                printf("DIGITE A OPERACAO DESEJADA: ");
+                scanf("%d",&opcao);
+       } while (opcao!=0); 
+}
+
+void menu_arquivo(){
+       int opcao;
+       do
+       { 
+       printf("\n");
+       printf(  
+               " _________________(MENU ARQUIVO)_____________________\n"
                "|                                                    |\n"
-               "|                                                    |\n"
-               "| INSERIR O TAMANHO DO VETOR= 1                      |\n"
-               "| IMPRIMI=3                                          |\n"
-               "| VOLTA AO MENU PRINCIPAL = 0                        |\n"
-               "|                                                    |\n");
-       printf("DIGITE A OPERACAO DESEJADA: ");  
+               "| IMPRIMIR = 1                                       |\n"
+               "| ENCERRAR OPERACOES = 0                             |\n"
+               "|____________________________________________________|\n");
+                printf("DIGITE A OPERACAO DESEJADA: ");
+                scanf("%d",&opcao);
+       } while (opcao!=0); 
 }

@@ -2,6 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-void ler(char nome[]);
+void ler();
 
-void escreve(char arquivo_saida[], clock_t tempo_exe);
+void escreve_arquivo_tempo(clock_t tempo_exe);

@@ -4,8 +4,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include<string.h>
 // Vai ler o arquivo de teste
-void ler(char nome[]){
+void ler(){
+    char nome[1000];
+    printf("Digite o nome do arquivo:");
+    scanf(" %[^\n]s ",nome);
     FILE *file = fopen(nome,"r");
     if(file==NULL){
         printf("Erro para abrir o arquivo de leitura!!!!");
@@ -39,18 +43,18 @@ void ler(char nome[]){
         if (Op == 1){
             retirar_menor_pid(vetor_celula, &lista_processo, Qt);
         }
-        /*
-        printf("OP=%d\n",Op);
-        printf("QT=%d\n",Qt);
-        printf("\n");*/
     }
     imprime_vetor(vetor_celula,&lista_processo, N);
     fclose(file);
 }
 // vai escrever o arquivo de saida
-void escreve(char arquivo_saida[],clock_t tempo_execu ){
+void escreve_arquivo_tempo(clock_t tempo_execu){
+    char arquivo_saida[1000];
+    printf("Digite o nome do arquivo de saida:");
+    scanf(" %[^\n]s ",arquivo_saida);
     char tempo[20];
-    FILE *saida = fopen(arquivo_saida, "a");
+
+    FILE *saida = fopen(arquivo_saida, "w");
     if(saida) {
         sprintf(tempo, "%f ", ((float)tempo_execu)/CLOCKS_PER_SEC);
         fputs(tempo, saida);
