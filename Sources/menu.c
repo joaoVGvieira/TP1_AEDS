@@ -1,7 +1,9 @@
  #include <stdio.h>
  #include <stdlib.h>
  #include "../Libs/menu.h"
-
+ #include "../Libs/lista_Processos.h"
+ #include "../Libs/arquivos.h"
+ #include "../Libs/Processo.h"
  void menu(){
         printf(
                " _________________(MENU PRINCIPAL)___________________ \n"
@@ -34,6 +36,24 @@ void menu_interativo(){
                "|____________________________________________________|\n");
                 printf("DIGITE A OPERACAO DESEJADA: ");
                 scanf("%d",&opcao);
+                switch (opcao)
+                {
+                case 1:
+                       /* code */
+                       break;
+                case 2:
+                       /* code */
+                       break;
+                case 3:
+                       /* code */
+                       break;
+                case 0:
+                       break;
+                default:
+                     printf("\n\n-----Opção inválida!!!!-----\n\n");  
+                     break;
+                }
+                
        } while (opcao!=0); 
 }
 
@@ -45,10 +65,21 @@ void menu_arquivo(){
        printf(  
                " _________________(MENU ARQUIVO)_____________________\n"
                "|                                                    |\n"
-               "| IMPRIMIR = 1                                       |\n"
-               "| ENCERRAR OPERACOES = 0                             |\n"
+               "| IMPRIMIR DADOS NO TERMINAL = 1                     |\n"
+               "| SAIR E DIGITA O NOME DO ARQUIVO DE SAIDA = 0       |\n"
                "|____________________________________________________|\n");
                 printf("DIGITE A OPERACAO DESEJADA: ");
                 scanf("%d",&opcao);
+              switch (opcao)
+                {
+                case 1:
+                       /* code */
+                       break;
+                case 0:
+                       break;
+                default:
+                     printf("\n\n-----Opção inválida!!!!-----\n\n");  
+                     break;
+                }
        } while (opcao!=0); 
 }

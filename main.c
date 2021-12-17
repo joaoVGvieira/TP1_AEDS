@@ -9,14 +9,11 @@ int main(void){
     tempo_execu = clock();
     //("arquivo_teste/teste.txt"); se for usar de outra pasta usa assim
     char arquivo_saida[1000];
-    do
-    {
         printf("\n");
         menu();
         scanf("%d",&operacao_sistema);
         switch (operacao_sistema) {
         case 0:
-            printf("\n\n-----Volte sempre!!!-----\n\n"); 
             break;
         case 1:
             printf("\n");
@@ -31,8 +28,8 @@ int main(void){
             break;  
         default:
             printf("\n\n-----Opção inválida!!!!-----\n\n");
-        }
-    } while (operacao_sistema!=0);
+        }   
+    printf("\n\n-----Volte sempre!!!-----\n\n"); 
     system("pause");
     return 0;
 }
