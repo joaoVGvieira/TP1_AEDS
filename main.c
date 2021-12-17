@@ -22,7 +22,6 @@ int main(void){
         case 2:
             tempo_execu = clock();
             ler();
-            menu_arquivo();
             tempo_execu =  clock()- tempo_execu;
             escreve_arquivo_tempo(tempo_execu);
             break;  
