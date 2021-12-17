@@ -13,3 +13,18 @@
                "|                                                    |\n");
         printf("DIGITE A OPERACAO DESEJADA: ");
     }
+
+void menu_arquivo(){
+       printf("1.digitar para nome do arquivo para leitura");
+}
+void menu_interativo(){
+       printf(
+               "|                                                    |\n"
+               "|                                                    |\n"
+               "|                                                    |\n"
+               "| INSERIR O TAMANHO DO VETOR= 1                      |\n"
+               "| IMPRIMI=3                                          |\n"
+               "| VOLTA AO MENU PRINCIPAL = 0                        |\n"
+               "|                                                    |\n");
+       printf("DIGITE A OPERACAO DESEJADA: ");  
+}

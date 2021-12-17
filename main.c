@@ -5,18 +5,20 @@
 #include "Libs/menu.h"
 int main(void){
     int operacao_sistema;
+    int N;
     clock_t tempo_execu;
     tempo_execu = clock();
     char nome[] = ("arquivo_teste/teste.txt"); 
     char arquivo_saida[]=("Teste_saida.txt");
-    do {
     menu();
     scanf("%d",&operacao_sistema);
     switch (operacao_sistema) {
         case 0:
             printf("\n\n-----Volte sempre!!!-----\n\n"); 
             break;
-        case 1: 
+        case 1:
+            printf("DIGITE O TAMANHO N DO VETOR:");
+            scanf("%d",&N);
             break;
         case 2:
             tempo_execu = clock();
@@ -27,7 +29,6 @@ int main(void){
         default:
             printf("\n\n-----Opção inválida!!!!-----\n\n");
     }
-} while (operacao_sistema != 0);
     system("pause");
     return 0;
 }

@@ -13,6 +13,8 @@ void inicializa_vetor(int total_celulas){
     imprime_vetor(vetor_celula,&lista_processo, total_celulas);
 }
 */
+
+
 void criar_vetor_celula(Vetor_Celula **celula, int total_celulas){
     (*celula) = (Vetor_Celula*) malloc(total_celulas * sizeof(Vetor_Celula));
 }

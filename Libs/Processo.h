@@ -19,6 +19,7 @@ typedef struct
 //Adiciona hora no struct tempo;
 void hora_Atual(Processos *Processo);
 
+//Alocar os valores de Processos
 void implementar_processo(Processos *Processo);
 
 //PID:
@@ -30,3 +31,4 @@ int get_PID(Processos *Processo);
 void set_Prioridade(Processos *Processo);
 int get_Prioridade(Processos *Processo);
 
+void imprimir_tempo(Processos *Processo); 
