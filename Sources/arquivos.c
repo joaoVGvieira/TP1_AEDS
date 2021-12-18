@@ -50,7 +50,8 @@ void ler(){
 // vai escrever o arquivo de saida
 void escreve_arquivo_tempo(clock_t tempo_execu){
     char arquivo_saida[1000];
-    printf("DIGITE O NOME DO ARQuIVO DE SAIDA: ");
+
+    printf("DIGITE O NOME DO ARQUIVO DE SAIDA:");
     scanf(" %[^\n]s ",arquivo_saida);
     char tempo[20];
 
