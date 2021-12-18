@@ -55,6 +55,7 @@ void escreve_arquivo_tempo(char nome[1000], clock_t tempo_execu){
         fputs(tempo, saida);
         fprintf(saida,"segundos\n");
         fclose(saida);
+        printf("\nARQUIVO DE SAIDA FOI ATUALIZADO!!!\n");
     } else
         printf("\nERRO ao abrir arquivo de saida!\n");
 }

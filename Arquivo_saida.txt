@@ -1,3 +1,0 @@
-teste.txt 0.021702 segundos
-teste100000.txt 45.308460 segundos
-teste200000.txt 310.604980 segundos
