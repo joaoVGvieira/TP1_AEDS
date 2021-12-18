@@ -7,6 +7,7 @@
 int main(void){
     int operacao_sistema;
     clock_t tempo_execu;
+    char nome[1000];
     tempo_execu = clock();
     //("arquivo_teste/teste.txt"); se for usar de outra pasta usa assim
     char arquivo_saida[1000];
@@ -32,9 +33,11 @@ int main(void){
             break;
         case 2:
             tempo_execu = clock();
-            ler();
+             printf("DIGITE O NOME DO ARQUIVO DE ENTRADA: ");
+             scanf(" %[^\n]s ",nome);
+             ler(nome);
             tempo_execu =  clock()- tempo_execu;
-            escreve_arquivo_tempo(tempo_execu);
+            escreve_arquivo_tempo(nome,tempo_execu);
             break;  
         default:
             printf("\n\n-----Opção inválida!!!!-----\n\n");

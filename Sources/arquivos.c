@@ -6,10 +6,7 @@
 #include <time.h>
 #include <string.h>
 // Vai ler o arquivo de teste
-void ler(){
-    char nome[1000];
-    printf("DIGITE O NOME DO ARQUIVO DE ENTRADA: ");
-    scanf(" %[^\n]s ",nome);
+void ler(char nome[1000]){
     FILE *file = fopen(nome,"r");
     if(file==NULL){
         printf("Erro para abrir o arquivo de leitura!!!!");
@@ -48,18 +45,15 @@ void ler(){
     fclose(file);
 }
 // vai escrever o arquivo de saida
-void escreve_arquivo_tempo(clock_t tempo_execu, char nome[1000]){
-    char arquivo_saida[1000];
-
-    printf("DIGITE O NOME DO ARQUIVO DE SAIDA: ");
-    scanf(" %[^\n]s ",arquivo_saida);
+void escreve_arquivo_tempo(char nome[1000], clock_t tempo_execu){
+    char arq_sai[] = ("Arquivo_saida.txt");
     char tempo[20];
-
-    FILE *saida = fopen(arquivo_saida, "a");
+    FILE *saida = fopen(arq_sai, "a");
     if(saida) {
-        sprintf(tempo, "%f ", ((float)tempo_execu)/CLOCKS_PER_SEC);
+        fputs(nome, saida);
+        sprintf(tempo, " %f ", ((float)tempo_execu)/(float)CLOCKS_PER_SEC);
         fputs(tempo, saida);
-        fprintf(saida,"milisegundos\n");
+        fprintf(saida,"segundos\n");
         fclose(saida);
     } else
         printf("\nERRO ao abrir arquivo de saida!\n");
