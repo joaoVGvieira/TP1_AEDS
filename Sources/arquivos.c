@@ -8,7 +8,7 @@
 // Vai ler o arquivo de teste
 void ler(){
     char nome[1000];
-    printf("DIGITE O NOME DO ARQUIVO DE ENTRADA:");
+    printf("DIGITE O NOME DO ARQUIVO DE ENTRADA: ");
     scanf(" %[^\n]s ",nome);
     FILE *file = fopen(nome,"r");
     if(file==NULL){
@@ -51,7 +51,7 @@ void ler(){
 void escreve_arquivo_tempo(clock_t tempo_execu){
     char arquivo_saida[1000];
 
-    printf("DIGITE O NOME DO ARQUIVO DE SAIDA:");
+    printf("DIGITE O NOME DO ARQUIVO DE SAIDA: ");
     scanf(" %[^\n]s ",arquivo_saida);
     char tempo[20];
 
