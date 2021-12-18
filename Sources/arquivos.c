@@ -48,20 +48,19 @@ void ler(){
     fclose(file);
 }
 // vai escrever o arquivo de saida
-void escreve_arquivo_tempo(clock_t tempo_execu){
+void escreve_arquivo_tempo(clock_t tempo_execu, char nome[1000]){
     char arquivo_saida[1000];
 
     printf("DIGITE O NOME DO ARQUIVO DE SAIDA: ");
     scanf(" %[^\n]s ",arquivo_saida);
     char tempo[20];
 
-    FILE *saida = fopen(arquivo_saida, "w");
+    FILE *saida = fopen(arquivo_saida, "a");
     if(saida) {
         sprintf(tempo, "%f ", ((float)tempo_execu)/CLOCKS_PER_SEC);
         fputs(tempo, saida);
         fprintf(saida,"milisegundos\n");
         fclose(saida);
-
     } else
         printf("\nERRO ao abrir arquivo de saida!\n");
 }
