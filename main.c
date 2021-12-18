@@ -1,22 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Libs/lista_Processos.h"
 #include "Libs/arquivos.h"
-#include "Libs/menu.h"
+#include "Libs/interativo.h"
+
+
 int main(void){
     int operacao_sistema;
     clock_t tempo_execu;
     tempo_execu = clock();
     //("arquivo_teste/teste.txt"); se for usar de outra pasta usa assim
     char arquivo_saida[1000];
-        printf("\n");
-        menu();
-        scanf("%d",&operacao_sistema);
-        switch (operacao_sistema) {
+    printf("\n");
+    printf(
+          " _________________(MENU PRINCIPAL)___________________ \n"
+          "|                                                    |\n"
+          "| ESCOLHA UMA DAS SEGUINTES FORMAS DE INICIALIZACAO: |\n"
+          "|                                                    |\n"
+          "| INTERATIVO = 1                                     |\n"
+          "| POR ARQUIVO = 2                                    |\n"
+          "| ENCERRAR OPERACOES = 0                             |\n"
+          "|____________________________________________________|\n");
+    printf("DIGITE A OPERACAO DESEJADA: ");
+
+        //menu();
+    scanf("%d",&operacao_sistema);
+    switch (operacao_sistema) {
         case 0:
             break;
         case 1:
-            printf("\n");
             menu_interativo();
             break;
         case 2:

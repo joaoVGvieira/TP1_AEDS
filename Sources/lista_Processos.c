@@ -126,42 +126,22 @@ int get_celula_proxima(Vetor_Celula *celula){
     return celula->celula_proxima;
 }
 
+int get_total_celulas_ocupadads(Lista_Processo lista_processo){
+    return lista_processo.quantidade_celulas_ocupadas;
+}
+
 int imprime_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int numero_celulas){
     int i;
     int posicao_pid = lista_processo->posicao_menor_pid;
-    printf("\nPosi_menor: %d\n", lista_processo->posicao_menor_pid);
-    printf("Posi_maior: %d\n", lista_processo->posicao_maior_pid);
-    printf("QTD: %d\n", lista_processo->quantidade_celulas_ocupadas);
-    printf("TOTAL CELULAS: %d\n\n", lista_processo->total_celulas);
     for(i = 0; i < numero_celulas; i++){
         if (posicao_pid == -1){
             break;
         }
-            printf("%.3d -> ", posicao_pid);
-            printf("%d\n", get_PID(&(celula[posicao_pid].processo)));
-            posicao_pid = celula[posicao_pid].celula_proxima;
+        printf("PID: %d\n", get_PID(&(celula[posicao_pid].processo)));
+        printf("Prioridade: %d\n", get_Prioridade(&(celula[posicao_pid].processo)));
+        imprimir_tempo(&(celula[posicao_pid].processo));
+        printf("\n");
+        posicao_pid = celula[posicao_pid].celula_proxima;
     }
 }
-/* Serve para testar se esta organizando os elementos 
-int main(){
-    int a = 1000;
-    srand((unsigned)time(NULL)); // Precissa estar na nossa main para funcionar corretamente
-    inicializa_vetor(a);
-    printf("\n");
-    system("pause");
-    return 0;
-} */
-
-/*int imprime_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int numero_celulas){
-    int i;
-    for(i = 0; i < numero_celulas; i++){
-       printf("PID: %d\n", get_PID(&(celula)))
-
-       imprimir_tempo((celula[i].processo.time));
-
-        //printf("Hora: ");
-
-    }
-    //imprimir_hora_arquivo(&(celula->processo.time));
-}*/
 

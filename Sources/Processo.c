@@ -17,7 +17,6 @@ void implementar_processo(Processos *Processo){
     set_PID(Processo);
     hora_Atual(Processo);
     set_Prioridade(Processo);
-    imprimir_tempo(Processo);
 }
 // Abaixo estou usando rand() % 9999 para gerar um PID aleatorio de 0 ate 9999.
 void set_PID(Processos *Processo){
@@ -37,5 +36,5 @@ int get_Prioridade(Processos *Proceso){
 }
 
 void imprimir_tempo(Processos *Processo){
-    printf("Tempo--> %.2d:%.2d:%.2d\n",Processo->temp.hora, Processo->temp.min, Processo->temp.seg);
+    printf("Tempo: %.2d:%.2d:%.2d\n",Processo->temp.hora, Processo->temp.min, Processo->temp.seg);
 }

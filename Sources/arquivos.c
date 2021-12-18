@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include<string.h>
+#include <string.h>
 // Vai ler o arquivo de teste
 void ler(){
     char nome[1000];
@@ -44,13 +44,13 @@ void ler(){
             retirar_menor_pid(vetor_celula, &lista_processo, Qt);
         }
     }
-    imprime_vetor(vetor_celula,&lista_processo, N);
+    //imprime_vetor(vetor_celula,&lista_processo, N);
     fclose(file);
 }
 // vai escrever o arquivo de saida
 void escreve_arquivo_tempo(clock_t tempo_execu){
     char arquivo_saida[1000];
-    printf("DIGITE O NOME DO ARQuIVO DE SAIDA:");
+    printf("DIGITE O NOME DO ARQuIVO DE SAIDA: ");
     scanf(" %[^\n]s ",arquivo_saida);
     char tempo[20];
 

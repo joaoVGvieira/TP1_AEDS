@@ -43,3 +43,5 @@ int get_celula_anterior(Vetor_Celula *celula);
 void set_celula_proxima(Vetor_Celula *celula, int posicao);
 
 int get_celula_proxima(Vetor_Celula *celula);
+
+int get_total_celulas_ocupadads(Lista_Processo lista_processo);
