@@ -5,7 +5,8 @@
 
 
 int main(void){
-    int operacao_sistema;
+    int operacao_sistema; 
+    char num[20];
     clock_t tempo_execu;
     char nome[1000];
     tempo_execu = clock();
@@ -35,14 +36,16 @@ int main(void){
             tempo_execu = clock();
              printf("DIGITE O NOME DO ARQUIVO DE ENTRADA: ");
              scanf(" %[^\n]s ",nome);
+             printf("DIGITE O NUMERO DE TESTE: ");
+             scanf(" %[^\n]s ",num);
              ler(nome);
             tempo_execu =  clock()- tempo_execu;
-            escreve_arquivo_tempo(nome,tempo_execu);
+            escreve_arquivo_tempo(num,tempo_execu);
             break;  
         default:
             printf("\n\n-----Opção inválida!!!!-----\n\n");
         }   
-    printf("\n\n-----Volte sempre!!!-----\n\n"); 
+    printf("\n\n-----VOLTE SEMPRE!!!-----\n\n"); 
     system("pause");
     return 0;
 }

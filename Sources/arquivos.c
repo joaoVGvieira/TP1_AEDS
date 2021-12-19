@@ -42,15 +42,15 @@ void ler(char nome[1000]){
         }
     }
     fclose(file);
-    libera_memoria(&vetor_celula);
+    //libera_memoria(&vetor_celula);
 }
 // vai escrever o arquivo de saida
-void escreve_arquivo_tempo(char nome[1000], clock_t tempo_execu){
+void escreve_arquivo_tempo(char num[20], clock_t tempo_execu){
     char arq_sai[] = ("Arquivo_saida.txt");
     char tempo[20];
     FILE *saida = fopen(arq_sai, "a");
     if(saida) {
-        fputs(nome, saida);
+        fputs(num, saida);
         sprintf(tempo, " %f ", ((float)tempo_execu)/(float)CLOCKS_PER_SEC);
         fputs(tempo, saida);
         fprintf(saida,"segundos\n");
