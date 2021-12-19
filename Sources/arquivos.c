@@ -41,8 +41,8 @@ void ler(char nome[1000]){
             retirar_menor_pid(vetor_celula, &lista_processo, Qt);
         }
     }
-    //imprime_vetor(vetor_celula,&lista_processo, N);
     fclose(file);
+    libera_memoria(&vetor_celula);
 }
 // vai escrever o arquivo de saida
 void escreve_arquivo_tempo(char nome[1000], clock_t tempo_execu){

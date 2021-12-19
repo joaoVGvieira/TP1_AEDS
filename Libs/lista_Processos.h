@@ -34,6 +34,9 @@ void organizacao_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int
 //impreme os valores que estao no processo
 int imprime_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int numero_celulas);
 
+// Libera a memória alocada dinamicamente
+void libera_memoria(Vetor_Celula **celula);
+
 // gets e sets:
 
 void set_celula_anterior(Vetor_Celula *celula, int posicao);

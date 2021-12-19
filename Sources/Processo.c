@@ -13,6 +13,7 @@ void hora_Atual(Processos *processo){
     processo->temp.seg = Hora_Atual->tm_sec;
 }
 
+// Função que quando for chamada irá chamar as 3 funções contidas nela
 void implementar_processo(Processos *Processo){
     set_PID(Processo);
     hora_Atual(Processo);

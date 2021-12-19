@@ -43,9 +43,10 @@ void menu_interativo(){
             printf("\nTotal de celulas ocupadas: %d\n", get_total_celulas_ocupadads(lista_processo));
             break;
         case 0:
+            libera_memoria(&vetor_celula);
             break;
         default:
-            printf("\n\n-----Opção inválida!!!!-----\n\n");  
+            printf("\n\n-----Opcao invalida!!!!-----\n\n");  
             break;
         }
             
