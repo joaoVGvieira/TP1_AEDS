@@ -42,10 +42,10 @@ void preenche_vetor(Lista_Processo *lista_processo, int qtd_operacao){
             set_celula_proxima(&(lista_processo->celula[aux]), -1);
             lista_processo->quantidade_celulas_ocupadas ++; 
         }
-        // Quando houver algum pid na lista e exutado este código
+        // Quando houver algum pid na lista e executado este código
         else{
             implementar_processo(&(lista_processo->celula[aux].processo));
-            // As proximas 6 linhas servem para o fim de simplificar o código posteriormrntr 
+            // As proximas 6 linhas servem para o fim de simplificar o código posteriormente 
             int posi_menor_pid = lista_processo->posicao_menor_pid;
             int posi_maior_pid = lista_processo->posicao_maior_pid;
             int menor_pid, maior_pid, pid_atual;
@@ -64,7 +64,7 @@ void preenche_vetor(Lista_Processo *lista_processo, int qtd_operacao){
                 lista_processo->quantidade_celulas_ocupadas ++;
             }
 
-            // Este else if e executando quando é gerado um pid mnor do que o menor pid existemte, 
+            // Este else if e executado quando é gerado um pid mnor do que o menor pid existente, 
             // por sua vez esse novo pid se torna o menor pid do vetor
             else if (pid_atual <= menor_pid){
                 lista_processo->celula_disponivel = lista_processo->celula[aux].celula_proxima;
@@ -102,7 +102,7 @@ void preenche_vetor(Lista_Processo *lista_processo, int qtd_operacao){
     }
 }
 
-// Função responsavel por retirar os N menore pids. N este passado pelo usúario ou arquivo
+// Função responsavel por retirar os N menores pids. N este passado pelo usúario ou arquivo
 void retirar_menor_pid(Lista_Processo *lista_processo, int qtd_operacao){
     int i;
     int posi_menor_pid = lista_processo->posicao_menor_pid;

@@ -31,7 +31,7 @@ void retirar_menor_pid(Lista_Processo *lista_processo, int qtd_operacao);
 // vai colocar -1 em todas as celulas e encadear as celulas
 void organizacao_vetor(Lista_Processo *lista_processo, int total_celulas);
 
-//impreme os valores que estao no processo
+//imprime os valores que estao no processo
 int imprime_vetor(Lista_Processo *lista_processo, int numero_celulas);
 
 // Libera a memória alocada dinamicamente
