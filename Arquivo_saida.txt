@@ -1,3 +1,6 @@
 1 0.000497 segundos
 2 36.029095 segundos
 3 185.315903 segundos
+4 174.097397 segundos
+5 39.966160 segundos
+6 237.297379 segundos
