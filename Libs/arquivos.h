@@ -4,4 +4,4 @@
 #include <time.h>
 void ler(char nome[1000]);
 
-void escreve_arquivo_tempo(char noem[1000], clock_t tempo_exe);
+void escreve_arquivo_tempo(char num[20], clock_t tempo_exe);
