@@ -23,16 +23,16 @@ typedef struct{
 void criar_vetor_celula(Vetor_Celula **celula, int total_celulas);
 
 //preencher os vetores
-void preenche_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int qtd_operacao);
+void preenche_vetor(Lista_Processo *lista_processo, int qtd_operacao);
 
 //vai  apagar os primeiros elementos
-void retirar_menor_pid(Vetor_Celula *celula, Lista_Processo *lista_processo, int qtd_operacao);
+void retirar_menor_pid(Lista_Processo *lista_processo, int qtd_operacao);
 
 // vai colocar -1 em todas as celulas e encadear as celulas
-void organizacao_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int total_celulas);
+void organizacao_vetor(Lista_Processo *lista_processo, int total_celulas);
 
 //impreme os valores que estao no processo
-int imprime_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int numero_celulas);
+int imprime_vetor(Lista_Processo *lista_processo, int numero_celulas);
 
 // Libera a memória alocada dinamicamente
 void libera_memoria(Vetor_Celula **celula);

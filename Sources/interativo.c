@@ -1,13 +1,12 @@
 #include "../Libs/interativo.h"
 
 void menu_interativo(){
-    Vetor_Celula *vetor_celula;
     Lista_Processo lista_processo;
     int N, opcao, Qt;
     printf("DIGITE O TAMANHO N DO VETOR PARA INICIALIZA-LO: ");
     scanf("%d",&N);
-    criar_vetor_celula(&vetor_celula, N);
-    organizacao_vetor(vetor_celula, &lista_processo, N);
+    criar_vetor_celula(&(lista_processo.celula), N);
+    organizacao_vetor(&lista_processo, N);
 
     do
     { 
@@ -28,22 +27,21 @@ void menu_interativo(){
         case 1:
             printf("\nQUANTIDADE DE INSERSOES: ");
             scanf("%d", &Qt);
-            preenche_vetor(vetor_celula, &lista_processo, Qt);
+            preenche_vetor(&lista_processo, Qt);
             break;
         case 2:
             printf("\nQUANTIDADE DE REMOCOES: ");
             scanf("%d", &Qt);
-            retirar_menor_pid(vetor_celula, &lista_processo, Qt);
+            retirar_menor_pid(&lista_processo, Qt);
             break;
         case 3:
             printf("\n");
-            imprime_vetor(vetor_celula, &lista_processo, N);
+            imprime_vetor(&lista_processo, N);
             break;
         case 4:
             printf("\nTotal de celulas ocupadas: %d\n", get_total_celulas_ocupadads(lista_processo));
             break;
         case 0:
-            libera_memoria(&vetor_celula);
             break;
         default:
             printf("\n\n-----Opcao invalida!!!!-----\n\n");  

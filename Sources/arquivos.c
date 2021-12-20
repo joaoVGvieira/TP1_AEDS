@@ -20,7 +20,6 @@ void ler(char nome[1000]){
     // Op = 0 para inserção e 1 para remoção início
     // Qt = quantidade de vezes que a operação será realizada
 
-    Vetor_Celula *vetor_celula;
     Lista_Processo lista_processo;
     srand((unsigned)time(NULL));
     
@@ -29,20 +28,19 @@ void ler(char nome[1000]){
         fscanf(file,"%d\n",&N);
         fscanf(file,"%d\n",&NLO);
     }
-    criar_vetor_celula(&vetor_celula, N);
-    organizacao_vetor(vetor_celula, &lista_processo, N);
+    criar_vetor_celula(&(lista_processo.celula), N);
+    organizacao_vetor(&lista_processo, N);
     for (int i = 0; i < NLO; i++)
     {
         fscanf(file,"%d %d",&Op,&Qt);
         if (Op == 0){
-            preenche_vetor(vetor_celula, &lista_processo, Qt);
+            preenche_vetor( &lista_processo, Qt);
         }
         if (Op == 1){
-            retirar_menor_pid(vetor_celula, &lista_processo, Qt);
+            retirar_menor_pid(&lista_processo, Qt);
         }
     }
     fclose(file);
-    //libera_memoria(&vetor_celula);
 }
 // vai escrever o arquivo de saida
 void escreve_arquivo_tempo(char num[20], clock_t tempo_execu){
