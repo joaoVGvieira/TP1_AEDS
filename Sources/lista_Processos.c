@@ -96,6 +96,7 @@ void preenche_vetor(Vetor_Celula *celula, Lista_Processo *lista_processo, int qt
         }
         // Este if serve para verificar se o vetor encheu, quando ele enche da um break e para de inserir novos pid
         if(lista_processo->quantidade_celulas_ocupadas == lista_processo->total_celulas){
+            printf("Vetor cheio. Nao e possivel adcionar mais elementos");
             break;
         }
     }
@@ -108,6 +109,7 @@ void retirar_menor_pid(Vetor_Celula *celula, Lista_Processo *lista_processo, int
     for(i = 0; i < qtd_operacao; i++){
         // Este if e responsavel por verificar quando o vetor esta/ficou vazio
         if(lista_processo->quantidade_celulas_ocupadas == 0){
+            printf("Lista vazia. Nao e possivel retirar mais elementos");
             break;
         }
 
